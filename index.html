@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clicker Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body onload="updatecount()">
+    <h1 id="Clicks">You have 0 Clicks</h1>
+    <button onclick="thing_clicked('clicks')" id="click_button">Click!</button>
+    
+    <div id="upgrades">
+        <button id="UpgradeClickerMachine" onclick="buyUpgrade('clicker_machine')">Buy Click Machine #1 (25 Clicks)</button>
+        <button id="UpgradeClickMachine2" onclick="buyUpgrade('click_machine_2')">Buy Click Machine #2 (50 Clicks)</button>
+        <button id="UpgradeClickMachine3" onclick="buyUpgrade('click_machine_3')">Buy Click Machine #3 (100 Clicks)</button>
+        <button id="UpgradeClickMachine4" onclick="buyUpgrade('click_machine_4')">Buy Click Machine #4 (200 Clicks)</button>
+        <button id="UpgradeClickMachine5" onclick="buyUpgrade('click_machine_5')">Buy Click Machine #5 (400 Clicks)</button>
+    </div>
+
+    <br><br>
+    
+    <button onclick="saveGame()">Save Game</button>
+    <button onclick="loadGame()">Load Game</button>
+    <input type="file" id="loadFile" style="display: none;" onchange="handleFileUpload(event)">
+    <h3>You can save you're game by pressing "Save Game" and load it by pressing "Load Game"</h3>
+</body>
+</html>
